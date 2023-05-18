@@ -1,21 +1,21 @@
 import React from 'react'
 import "./Footer.css"
 
-import logo from "../../assets/images/eco-logo.png"
-
 import { Container, Row, Col,ListGroup, ListGroupItem } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+
+  const year = new Date().getFullYear()
+
   return (
     <footer className='footer'>
       <Container>
         <Row>
           <Col lg="4">
             <div className='"logo'>
-              <img src={logo} alt="logo" />
               <div>
-                <h1>Multimart</h1>
+                <h1 className='text-white'>Multimart</h1>
               </div>
             </div>
             <p className='footer_text mt-4'>
@@ -68,21 +68,25 @@ const Footer = () => {
           <Col lg="3">
           <div className='footer_quick-links'>
               <h4 className='quick_links-title'>Contact</h4>
-              <ListGroup >
-                <ListGroupItem className='ps-0 border-0'>
+              <ListGroup className='footer_contact'>
+                <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                   <span><i class="ri-map-pin-line"></i></span>
                   <p>123 ZindaBazar, Sylhet, Bangladesh</p>
                 </ListGroupItem>
-                <ListGroupItem className='ps-0 border-0'>
+                <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                 <span><i class="ri-phone-line"></i></span>
                   <p>+91 1234567890</p>
                 </ListGroupItem>
-                <ListGroupItem className='ps-0 border-0'>
+                <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                 <span><i class="ri-mail-line"></i></span>
-                  <p>+91 1234567890</p>
+                  <p>example123@gmail.com</p>
                 </ListGroupItem>
               </ListGroup>
             </div>
+          </Col>
+
+          <Col lg="12">
+            <p className='footer_copyright'>Copyright {year} developed by Sam. All rights reserved.</p>
           </Col>
 
         </Row>
