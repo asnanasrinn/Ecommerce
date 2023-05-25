@@ -12,11 +12,11 @@ const Clock = () => {
   let interval;
   
   const countDown = () => {
-    const destination = new Date("Oct 10, 2022").getTime()
+    const destination = new Date("june 10, 2023").getTime()
 
     interval = setInterval(()=>{
         const now = new Date().getTime()
-        const different = now - destination 
+        const different = destination - now
         const days = Math.floor(different / (1000 * 60 * 60 *  24))
 
         const hours = Math.floor(different % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))

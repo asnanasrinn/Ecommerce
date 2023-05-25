@@ -3,6 +3,12 @@
     height: 70px;
     line-height: 70px;
 }
+#navbar{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+}
 .nav_wrapper{
     display: flex;
     align-items: center;
